@@ -8,12 +8,10 @@ D --> E([Scelta/suggerimento topic])
 E -. HTL .-> D
 E --> F
 F -. Score < threshold .-> D
-F --> G([Verifica fonti])
-G -. Verifica non superata .-> D
-G --> H([Bozza])
-H --> I([Titolo clickbait])
-H --> K([Articolo])
-H --> M([Immagini])
+F -. n_sources < 2 .-> D
+F --> I([Titolo clickbait])
+F --> K([Articolo])
+F --> M([Immagini])
 I --> J([Feedback titolo])
 J -. HTL .-> I
 J --> O([Salvataggio])
